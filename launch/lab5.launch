@@ -1,0 +1,8 @@
+<launch>
+	<node name="stage" pkg="stage_ros" type="stageros"
+	      args="$(find lab5)/world/playground.world" />
+	<node name="turtlebot_controller" pkg="lab5" type="MoveToGoal.py" output="screen" clear_params="true">
+		<param name="goal_x" value="-6"/>
+		<param name="goal_y" value="8"/>
+	</node>
+</launch>
